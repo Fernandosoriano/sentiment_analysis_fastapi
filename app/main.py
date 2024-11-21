@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app import schemas, crud
 from app.database import SessionLocal
@@ -47,3 +47,17 @@ def analyze_multiple_sentiments(comments: List[str], db: Session = Depends(get_d
 @app.get("/sentiments/", response_model=list[schemas.Sentiment])
 def read_sentiments(db: Session = Depends(get_db)):
     return crud.get_sentiments(db)
+
+# DELETE route to delete a specific sentiment by ID
+@app.delete("/sentiments/{sentiment_id}")
+def delete_sentiment(sentiment_id: int, db: Session = Depends(get_db)):
+    success = crud.delete_sentiment_by_id(db, sentiment_id)
+    if not success:
+        raise HTTPException(status_code=404, detail="Sentiment not found")
+    return {"detail": "Sentiment deleted successfully"}
+
+# DELETE route to delete all sentiments
+@app.delete("/sentiments/")
+def delete_all_sentiments(db: Session = Depends(get_db)):
+    crud.delete_all_sentiments(db)
+    return {"detail": "All sentiments deleted successfully"}
