@@ -1,3 +1,4 @@
+from textblob import TextBlob
 
 def analyze_sentiment(text: str) -> str:
     """
@@ -6,9 +7,13 @@ def analyze_sentiment(text: str) -> str:
     analysis = TextBlob(text)
     polarity = analysis.sentiment.polarity
 
-    if polarity > 0:
-        return "positive"
-    elif polarity < 0:
-        return "negative"
-    else:
+    # debugging to define the range of sentiment analysis:
+    # print(f"Text: {text}\nPolarity: {polarity}")
+
+    if -0.2 <= polarity <= 0.2:
         return "neutral"
+    elif polarity > 0.2:
+        return "positive"
+    else:
+        return "negative"
+
