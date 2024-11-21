@@ -1,15 +1,12 @@
 from sqlalchemy.orm import Session
-from app import models, schemas
+from app import models
 
-def create_sentiment(db: Session, sentiment_data: schemas.SentimentCreate, sentiment_value: str):
-    new_sentiment = models.Sentiment(
-        text=sentiment_data.text,
-        sentiment=sentiment_value
-    )
-    db.add(new_sentiment)
+def create_sentiment(db: Session, text: str, sentiment: str):
+    sentiment_entry = models.Sentiment(text=text, sentiment=sentiment)
+    db.add(sentiment_entry)
     db.commit()
-    db.refresh(new_sentiment)
-    return new_sentiment
+    db.refresh(sentiment_entry)
+    return sentiment_entry
 
-def get_sentiments(db: Session, skip: int = 0, limit: int = 10):
-    return db.query(models.Sentiment).offset(skip).limit(limit).all()
+def get_sentiments(db: Session):
+    return db.query(models.Sentiment).all()
