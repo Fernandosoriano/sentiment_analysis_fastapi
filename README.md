@@ -13,8 +13,8 @@ Antes de empezar, asegúrate de tener instalado lo siguiente:
 
 Cómo usar este proyecto:
 
-1. CLONAR EL RESPOSITORIO.
-Clona este repositorio en tu máquina local:
+1. CLONAR EL RESPOSITORIO.  
+Clona este repositorio en tu máquina local,con el siguiente comando:
 
 git clone https://github.com/Fernandosoriano/sentiment_analysis_fastapi.git
 
@@ -25,7 +25,7 @@ deje fijos los siguientes valores:
 POSTGRES_HOST=database     
 POSTGRES_PORT=5432
 
-4. CONSTRUIR Y LEVANTAR LOS CONTENEDORES.
+4. CONSTRUIR Y LEVANTAR LOS CONTENEDORES.  
 Coloquese en una terminal que contenga el proyecto principal y ejecute el siguiente comando para construir y levantar los servicios de la aplicación y la base de datos (postgresql):   
 
 docker-compose up --build
@@ -72,7 +72,7 @@ la cual contiene una collection de postman con los siguientes endpoints para pro
 3.-DELETE (http://127.0.0.1:8000/sentiments/) Permite borrar todos los registros de la base de datos.  
 4.-DELETE (http://127.0.0.1:8000/sentiments/id) Permite borrar un registro específico de la base de datos por ID.
 
-7.-IMPORTACION DE POSTMAN COLLECTION  
+7.-IMPORTACION DE POSTMAN COLLECTION.    
 En este punto tendra que importar la collection desde postman, y ahora debera ser capaz de realizar las peticiones de esta collection.
 
 
