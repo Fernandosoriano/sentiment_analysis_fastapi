@@ -19,9 +19,7 @@ Clona este repositorio en tu carpeta de preferencia, con el siguiente comando:
 git clone https://github.com/Fernandosoriano/sentiment_analysis_fastapi.git
 
 2. CONFIGURAR LAS VARIABLES DE ENTORNO.  
-En esta parte debe crear un archivo .env en la raíz del proyecto, puede basarse en el contenido que hay dentro del
-.env.example, borrando la parte de la extensión que dice .example, y a continuación rellene el archivo con sus propias credenciales para la creación de su BD,
-deje fijos los siguientes valores:    
+Ingrese al proyecto con su editor de código y a continuación debe crear un archivo .env en la raíz del proyecto, puede basarse en el contenido que hay dentro del archivo .env.example, solo asegurese de borrar la parte de la extensión que dice .example, y a continuación rellene el archivo con sus propias credenciales para la creación de su BD, deje fijos los siguientes valores:   
 POSTGRES_HOST=database     
 POSTGRES_PORT=5432
 
@@ -48,7 +46,7 @@ ejemplo :docker exec -it sentimient_analysis-app-1 bash
 
 Con este comando ud. Estara ingresando al contenedor que está corriendo la api.
 
-5- CREACIÓN DE TABLA SENTIMENTS.  
+5- CREACIÓN DE TABLA SENTIMENTS.   
 Una vez que esté dentro del contenedor que corre la api, debe crear la tabla sentiments
 necesaria para el correcto funcionamiento de la api, para eso corra el siguiente comando:
 
