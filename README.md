@@ -21,7 +21,7 @@ git clone https://github.com/Fernandosoriano/sentiment_analysis_fastapi.git
 2. CONFIGURAR LAS VARIABLES DE ENTORNO.
 Crea un archivo .env en la raíz del proyecto, puede basarse en el contenido que hay dentro del
 .env.example, borrando la parte de la extensión que dice .example, y rellenando con sus propias credenciales para la creación de su BD,
-deje fijos los vlores:
+deje fijos los valores:  
 POSTGRES_HOST=database   
 POSTGRES_PORT=5432
 
