@@ -21,7 +21,7 @@ git clone https://github.com/Fernandosoriano/sentiment_analysis_fastapi.git
 2. CONFIGURAR LAS VARIABLES DE ENTORNO.
 En esta parte debe crear un archivo .env en la raíz del proyecto, puede basarse en el contenido que hay dentro del
 .env.example, borrando la parte de la extensión que dice .example, y a continuación rellene el archivo con sus propias credenciales para la creación de su BD,
-deje fijos los siguientes valores:     
+deje fijos los siguientes valores:    
 POSTGRES_HOST=database     
 POSTGRES_PORT=5432
 
@@ -30,7 +30,7 @@ POSTGRES_PORT=5432
 
 docker-compose up --build
 
-4. INGRESE AL CONTENEDOR DE LA API.
+4. INGRESE AL CONTENEDOR DE LA API.  
 Una vez que los contenedores estén corriendo, abra otra terminal e ingrese al contenedor de la aplicación;
 para esto, realice los siguientes pasos:
 
@@ -43,18 +43,18 @@ para esto, realice los siguientes pasos:
   Con este comando ud. Podra saber el nombre del contenedor que esta corriendo 
   la api, una vez que conozca dicho nombre, ejecute el siguiente comando:  
 
-docker exec -it nombre_del_contenedor_api bash 
+docker exec -it nombre_del_contenedor_api bash  
 ejemplo :docker exec -it sentimient_analysis-app-1 bash
 
 Con este comando ud. Estara ingresando al contenedor que está corriendo la api.
 
-5- CREACIÓN DE TABLA SENTIMENTS.
+5- CREACIÓN DE TABLA SENTIMENTS.  
 Una vez que esté dentro del contenedor que corre la api, debe crear la tabla sentiments
 necesaria para el correcto funcionamiento de la api, para eso corra el siguiente comando:
 
 alembic revision --autogenerate -m "Create sentiment table"
 
-6.-REALIZAR MIGRACIONES.
+6.-REALIZAR MIGRACIONES.  
 Una vez creada la tabla sentiments, ahora tendrá que efectuar las migraciones a 
 su BD de postgres, para hacer eso, asegurese de seguir dentro del contenedor de la api
 y ejecute el siguiente comando:
