@@ -5,10 +5,10 @@ Esta es una API RESTful construida con FastAPI que permite realizar análisis de
 Requisitos previos
 Antes de empezar, asegúrate de tener instalado lo siguiente:
 
-1.-Docker (importante tenerlo actualizado a la última versión)
-2.-Docker Compose
-3.-Git
-4.-Su editor de código de preferencia
+1.-Docker (importante tenerlo actualizado a la última versión)  
+2.-Docker Compose  
+3.-Git  
+4.-Su editor de código de preferencia  
 5.-Postman  (para probar la api)
 
 Cómo usar este proyecto:
