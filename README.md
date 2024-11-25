@@ -2,7 +2,7 @@ SENTIMENT ANALYSIS API.
 
 Esta es una API RESTful construida con FastAPI que permite realizar análisis de sentimientos sobre textos proporcionados. La API utiliza el modelo de procesamiento de lenguaje natural TextBlob, que es capaz de identificar el sentimiento general de un texto y clasificarlo en tres categorías: positivo, negativo o neutral. Los resultados del análisis se almacenan en una base de datos PostgreSQL, lo que permite realizar un seguimiento y almacenamiento de los análisis realizados.
 
-Requisitos previos
+Requisitos previos  
 Antes de empezar, asegúrate de tener instalado lo siguiente:
 
 1.-Docker (importante tenerlo actualizado a la última versión)  
