@@ -14,7 +14,7 @@ Antes de empezar, asegúrate de tener instalado lo siguiente:
 Cómo usar este proyecto:
 
 1. CLONAR EL RESPOSITORIO.  
-Clona este repositorio en tu máquina local,con el siguiente comando:
+Clona este repositorio en tu carpeta de preferencia, con el siguiente comando:  
 
 git clone https://github.com/Fernandosoriano/sentiment_analysis_fastapi.git
 
