@@ -19,20 +19,20 @@ Clona este repositorio en tu máquina local:
 git clone https://github.com/Fernandosoriano/sentiment_analysis_fastapi.git
 
 2. CONFIGURAR LAS VARIABLES DE ENTORNO.
-Crea un archivo .env en la raíz del proyecto, puede basarse en el contenido que hay dentro del
-.env.example, borrando la parte de la extensión que dice .example, y rellenando con sus propias credenciales para la creación de su BD,
-deje fijos los valores:  
-POSTGRES_HOST=database   
+En esta parte debe crear un archivo .env en la raíz del proyecto, puede basarse en el contenido que hay dentro del
+.env.example, borrando la parte de la extensión que dice .example, y a continuación rellene el archivo con sus propias credenciales para la creación de su BD,
+deje fijos los siguientes valores:     
+POSTGRES_HOST=database     
 POSTGRES_PORT=5432
 
 4. CONSTRUIR Y LEVANTAR LOS CONTENEDORES.
-Ejecuta el siguiente comando para construir y levantar los servicios de la aplicación y la base de datos (postgresql):
+5. Coloquese en una terminal que contenga el proyecto principal y ejecute el siguiente comando para construir y levantar los servicios de la aplicación y la base de datos (postgresql):  
 
 docker-compose up --build
 
 4. INGRESE AL CONTENEDOR DE LA API.
-Una vez que los contenedores estén corriendo, favor de ingresar al contenedor de la aplicación;
-para ingresaar al contenedor, realice los siguientes pasos:
+Una vez que los contenedores estén corriendo, abra otra terminal e ingrese al contenedor de la aplicación;
+para esto, realice los siguientes pasos:
 
   4.1
   liste todos los contenedores que tiene activos con el comando:
@@ -41,7 +41,7 @@ para ingresaar al contenedor, realice los siguientes pasos:
 
   4.2
   Con este comando ud. Podra saber el nombre del contenedor que esta corriendo 
-  la api, una vez que conozca este nombre, ejecute el siguiente comando:
+  la api, una vez que conozca dicho nombre, ejecute el siguiente comando:  
 
 docker exec -it nombre_del_contenedor_api bash 
 ejemplo :docker exec -it sentimient_analysis-app-1 bash
@@ -56,7 +56,7 @@ alembic revision --autogenerate -m "Create sentiment table"
 
 6.-REALIZAR MIGRACIONES.
 Una vez creada la tabla sentiments, ahora tendrá que efectuar las migraciones a 
-su BD de postgres, para hacer eso, asegurese de estar dentro del contenedor de la api
+su BD de postgres, para hacer eso, asegurese de seguir dentro del contenedor de la api
 y ejecute el siguiente comando:
 
 alembic upgrade head
@@ -71,6 +71,13 @@ la cual contiene una collection de postman con los siguientes endpoints para pro
 2.-GET (http://127.0.0.1:8000/sentiments/) Permite consultar todos los registros disponibles en la base de datos.   
 3.-DELETE (http://127.0.0.1:8000/sentiments/) Permite borrar todos los registros de la base de datos.  
 4.-DELETE (http://127.0.0.1:8000/sentiments/id) Permite borrar un registro específico de la base de datos por ID.
+
+7.-IMPORTACION DE POSTMAN COLLECTION
+
+En este punto tendra que importar la collection desde postman, y ahora debera ser capaz de realizar las peticiones de esta collection.
+
+
+Autor: Fernando Valle Soriano
 
 
 
