@@ -2,7 +2,7 @@ SENTIMENT ANALYSIS API.
 
 Esta es una API RESTful construida con FastAPI que permite realizar análisis de sentimientos sobre textos proporcionados. La API utiliza el modelo de procesamiento de lenguaje natural TextBlob, que es capaz de identificar el sentimiento general de un texto y clasificarlo en tres categorías: positivo, negativo o neutral. Los resultados del análisis se almacenan en una base de datos PostgreSQL, lo que permite realizar un seguimiento y almacenamiento de los análisis realizados.
 
-Requisitos previos  
+Requisitos previos.    
 Antes de empezar, asegúrate de tener instalado lo siguiente:
 
 1.-Docker (importante tenerlo actualizado a la última versión)  
@@ -18,7 +18,7 @@ Clona este repositorio en tu máquina local:
 
 git clone https://github.com/Fernandosoriano/sentiment_analysis_fastapi.git
 
-2. CONFIGURAR LAS VARIABLES DE ENTORNO.
+2. CONFIGURAR LAS VARIABLES DE ENTORNO.  
 En esta parte debe crear un archivo .env en la raíz del proyecto, puede basarse en el contenido que hay dentro del
 .env.example, borrando la parte de la extensión que dice .example, y a continuación rellene el archivo con sus propias credenciales para la creación de su BD,
 deje fijos los siguientes valores:    
@@ -26,7 +26,7 @@ POSTGRES_HOST=database
 POSTGRES_PORT=5432
 
 4. CONSTRUIR Y LEVANTAR LOS CONTENEDORES.
-5. Coloquese en una terminal que contenga el proyecto principal y ejecute el siguiente comando para construir y levantar los servicios de la aplicación y la base de datos (postgresql):  
+Coloquese en una terminal que contenga el proyecto principal y ejecute el siguiente comando para construir y levantar los servicios de la aplicación y la base de datos (postgresql):   
 
 docker-compose up --build
 
@@ -72,8 +72,7 @@ la cual contiene una collection de postman con los siguientes endpoints para pro
 3.-DELETE (http://127.0.0.1:8000/sentiments/) Permite borrar todos los registros de la base de datos.  
 4.-DELETE (http://127.0.0.1:8000/sentiments/id) Permite borrar un registro específico de la base de datos por ID.
 
-7.-IMPORTACION DE POSTMAN COLLECTION
-
+7.-IMPORTACION DE POSTMAN COLLECTION  
 En este punto tendra que importar la collection desde postman, y ahora debera ser capaz de realizar las peticiones de esta collection.
 
 
