@@ -33,14 +33,14 @@ docker-compose up --build
 Una vez que los contenedores estén corriendo, favor de ingresar al contenedor de la aplicación;
 para ingresaar al contenedor, realice los siguientes pasos:
 
-4.1
-liste todos los contenedores que tiene activos con el comando:
+  4.1
+  liste todos los contenedores que tiene activos con el comando:
 
-docker ps
+  docker ps
 
-4.2
-Con este comando ud. Podra saber el nombre del contenedor que esta corriendo 
-la api, una vez que conozca este nombre, ejecute el siguiente comando:
+  4.2
+  Con este comando ud. Podra saber el nombre del contenedor que esta corriendo 
+  la api, una vez que conozca este nombre, ejecute el siguiente comando:
 
 docker exec -it nombre_del_contenedor_api bash 
 ejemplo :docker exec -it sentimient_analysis-app-1 bash
@@ -66,9 +66,9 @@ en la siguiente carpeta: https://drive.google.com/drive/folders/1kIP8jYhl_MiMEUq
 
 la cual contiene una collection de postman con los siguientes endpoints para probar:
 
-1.-POST (http://127.0.0.1:8000/analyze_sentiment/) Permite almacenar registros de análisis de sentimiento en la base de datos.
-2.-GET (http://127.0.0.1:8000/sentiments/) Permite consultar todos los registros disponibles en la base de datos. 
-3.-DELETE (http://127.0.0.1:8000/sentiments/) Permite borrar todos los registros de la base de datos.
+1.-POST (http://127.0.0.1:8000/analyze_sentiment/) Permite almacenar registros de análisis de sentimiento en la base de datos.  
+2.-GET (http://127.0.0.1:8000/sentiments/) Permite consultar todos los registros disponibles en la base de datos.   
+3.-DELETE (http://127.0.0.1:8000/sentiments/) Permite borrar todos los registros de la base de datos.  
 4.-DELETE (http://127.0.0.1:8000/sentiments/id) Permite borrar un registro específico de la base de datos por ID.
 
 
